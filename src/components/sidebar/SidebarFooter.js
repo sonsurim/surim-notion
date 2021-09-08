@@ -3,6 +3,7 @@ import { $createElement } from '../../utils/templates.js';
 export default function SidebarFooter({ $target, onClick }) {
 	const $footer = $createElement('div', '.sidebar-footer');
 	const $createBtn = $createElement('span', '.create-btn');
+	$footer.setAttribute('data-target', 'modal');
 	$createBtn.setAttribute('data-target', 'modal');
 	$createBtn.textContent = '+ 새 페이지';
 

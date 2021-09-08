@@ -63,6 +63,12 @@ export default function Sidebar({ $target, initialState }) {
 		$target: $sidebarFooter,
 		onClick: {
 			createDocument: () => {
+				const isVisible = !$('.modal-container').classList.contains('hide');
+
+				if (isVisible) {
+					return;
+				}
+
 				makeNewListItemOnRoot({ needMark: false });
 
 				emit.showModal();
