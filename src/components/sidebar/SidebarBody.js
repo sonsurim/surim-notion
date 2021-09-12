@@ -42,6 +42,7 @@ export default function SidebarBody({ $target, initialState, onClick }) {
 
 		$navList.addEventListener('mouseover', e => {
 			const currentTarget = e.target.parentNode;
+			const { tagName, className } = currentTarget;
 
 			const $needRemoveCollection = document.querySelectorAll('.show');
 			const $deleteBtn = currentTarget.querySelector('.nav-delete-btn');
@@ -49,7 +50,7 @@ export default function SidebarBody({ $target, initialState, onClick }) {
 
 			removeClassAll($needRemoveCollection, 'show');
 
-			if (currentTarget.tagName !== 'LI') {
+			if (tagName !== 'LI' && className !== 'root') {
 				addClass($deleteBtn, 'show');
 				addClass($createBtn, 'show');
 			}

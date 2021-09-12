@@ -101,6 +101,7 @@ p.blank {
 	margin-top: -0.2rem;
 }
 .nav-page-title {
+	user-select: none;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
@@ -109,6 +110,7 @@ p.blank {
 .nav-toggler-btn,
 .nav-create-btn,
 .nav-delete-btn {
+	user-select: none;
 	opacity: 0.5;
 	border-radius: 3px;
 	z-index: 2;
@@ -165,6 +167,7 @@ p.blank {
 }
 .sidebar-footer .create-btn {
 	padding: 2rem;
+	user-select: none;
 }
 
 /* page */
