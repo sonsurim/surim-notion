@@ -1,5 +1,6 @@
 import { on, emit } from '../utils/emitter.js';
 
+import { isNeedProtect } from '../utils/valid.js';
 import { getStateAfter } from './gettersState.js';
 import { setElementAfter } from './settersElement.js';
 
@@ -96,6 +97,10 @@ export default function Store() {
 			dispatch('updateDocument', { id, nextDocument, onModal }),
 		);
 		on.deleteDocument((id, isCurrent) => {
+			if (!isNeedProtect(id)) {
+				return;
+			}
+
 			if (isCurrent) {
 				dispatch('deleteCurrentDocument', { id });
 			} else {

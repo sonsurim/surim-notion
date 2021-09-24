@@ -68,7 +68,7 @@ export default function SidebarBody({ $target, initialState, onClick }) {
 			const { id } = $li.dataset;
 			const { act } = e.target.dataset;
 
-			if (tagName === 'LI' || tagName === 'UL' || className.includes('blank') ) {
+			if (tagName === 'LI' || className.includes('root') || className.includes('blank') ) {
 				return;
 			}
 

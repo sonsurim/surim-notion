@@ -23,4 +23,16 @@ const isValidOpenedLi = openedLi => {
 	}
 };
 
-export { isValidState, isValidOpenedLi };
+const isNeedProtect = id => {
+	const PROTECT_DOCUMENT = ['16238', '16564', '17594', '17596', '18040', '18041', '18053', '18486', '18580', '19881', '18625', '18581', '19938', '19020', '19034', '19035', '19891'];
+	let result = true;
+
+	if (PROTECT_DOCUMENT.includes(id)) {
+		alert('문서 지우지 말아주세요....🥺')
+		result = false;
+	}
+
+	return result;
+}
+
+export { isValidState, isValidOpenedLi, isNeedProtect };
