@@ -1,5 +1,5 @@
 ## 🌐 사이트 주소
-https://notion-clone-theta.vercel.app/
+https://surim-notion.vercel.app/
 
 ## 🎥 시연 영상
 
